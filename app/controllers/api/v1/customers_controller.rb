@@ -1,4 +1,6 @@
-class Api::V1::CustomersController < ApplicationController
+class Api::V1::CustomersController < Api::ApiController
+  respond_to :json, :xml
+
   def index
   end
 

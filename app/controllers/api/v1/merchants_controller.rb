@@ -1,4 +1,6 @@
-class Api::V1::MerchantsController < ApplicationController
+class Api::V1::MerchantsController < Api::ApiController
+  respond_to :json, :xml
+  
   def index
   end
 

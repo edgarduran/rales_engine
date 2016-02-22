@@ -1,4 +1,6 @@
-class Api::V1::InvoiceItemsController < ApplicationController
+class Api::V1::InvoiceItemsController < Api::ApiController
+  respond_to :json, :xml
+  
   def index
   end
 
