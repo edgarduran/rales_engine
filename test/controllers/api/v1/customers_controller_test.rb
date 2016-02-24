@@ -10,7 +10,7 @@ class Api::V1::CustomersControllerTest < ActionController::TestCase
     assert_equal "Last_one", customers.first['last_name']
     assert_equal "Customer_two", customers.last['first_name']
     assert_equal "Last_two", customers.last['last_name']
-    assert_equal 2, customers.count
+    assert_equal 3, customers.count
     assert_response :success
   end
 
