@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'responders'
+# gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
+
 
 
 group :test do

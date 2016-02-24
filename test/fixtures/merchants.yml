@@ -1,10 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 3
   name: Merchant_one
 
 two:
+  id: 2
   name: Merchant_one
 
 three:
+  id: 1
   name: Merchant_two
