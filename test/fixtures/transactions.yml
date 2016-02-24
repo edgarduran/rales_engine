@@ -6,6 +6,16 @@ one:
   invoice_id:
 
 two:
+  credit_card_number: 1234567890980000
+  result: success
+  invoice_id:
+
+three:
+  credit_card_number: 1234567890987654
+  result: fail
+  invoice_id:
+
+four:
   credit_card_number: 0987654321234567
   result: fail
-  invoice_id: 
+  invoice_id:

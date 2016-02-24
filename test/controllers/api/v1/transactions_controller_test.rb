@@ -9,7 +9,7 @@ class Api::V1::TransactionsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal "1234567890987654", transactions.first['credit_card_number']
     assert_equal "success", transactions.first['result']
-    assert_equal 2, transactions.count
+    assert_equal 4, transactions.count
   end
 
   test "#show" do

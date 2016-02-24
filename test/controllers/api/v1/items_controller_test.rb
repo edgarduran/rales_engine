@@ -10,7 +10,7 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
     assert_equal "Item_one", items.first['name']
     assert_equal "description_one", items.first['description']
     assert_equal 1, items.first['unit_price']
-    assert_equal 2, items.count
+    assert_equal 3, items.count
   end
 
   test "#show" do

@@ -8,7 +8,7 @@ class Api::V1::InvoicesControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal "Paid", invoices.first['status']
-    assert_equal 2, invoices.count
+    assert_equal 3, invoices.count
   end
 
   test "#show" do
