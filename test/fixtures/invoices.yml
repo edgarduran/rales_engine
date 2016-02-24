@@ -6,6 +6,6 @@ one:
   customer_id:
 
 two:
-  status: Paid
+  status: Pending
   merchant_id:
   customer_id:
