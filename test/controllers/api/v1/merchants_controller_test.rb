@@ -8,7 +8,7 @@ class Api::V1::MerchantsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal "Merchant_one", merchants.first['name']
-    assert_equal 2, merchants.count
+    assert_equal 3, merchants.count
   end
 
   test "#show" do
