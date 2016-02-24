@@ -13,12 +13,12 @@ class Api::V1::TransactionsControllerTest < ActionController::TestCase
   end
 
   test "#show" do
-    get :show, format: :json, id: Transaction.first.id
+    get :show, format: :json, id: Transaction.last.id
 
     transaction = JSON.parse(response.body)
 
     assert_response :success
-    assert_equal "0987654321234567", transaction['credit_card_number']
-    assert_equal "fail", transaction['result']
+    assert_equal "1234567890987654", transaction['credit_card_number']
+    assert_equal "success", transaction['result']
   end
 end
