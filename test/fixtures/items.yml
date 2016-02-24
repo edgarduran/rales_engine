@@ -1,18 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 3
   name: Item_one
   description: description_one
   unit_price: 1
   merchant_id: 2
 
 two:
+  id: 2
   name: Item_one
   description: description_one
   unit_price: 1
   merchant_id: 1
 
 three:
+  id: 1
   name: Item_two
   description: description_two
   unit_price: 2
