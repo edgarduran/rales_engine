@@ -21,10 +21,13 @@ class Merchant < ActiveRecord::Base
     sum_invoices(paid)
   end
 
-  def self.total_revenue_by_date(params)
-    invoices = Invoice.where(updated_at: params["date"])
-    paid = Transaction.where(invoice_id: invoices.pluck(:id)).where(result: "success").pluck(:invoice_id)
-    sum_invoices(paid)
+  def self.total_revenue_by_date(date)
+    joins(invoices: [:transactions, :invoice_items]).where("transactions.result = ?", "success").where("invoices.created_at = ?", date).sum("invoice_items.quantity * invoice_items.unit_price")
+  end
+
+  def self.most_items(quantity)
+    paid = Transaction.where(invoice_id: Invoice.all.pluck(:id)).where(result: "success").pluck(:invoice_id)
+    InvoiceItem.where(invoice_id: paid).sum("quantity").to_s
   end
 
   def favorite_customer(params)

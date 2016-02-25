@@ -6,7 +6,7 @@ class Api::V1::MerchantsRevenueController < ApplicationController
   end
 
   def show
-    respond_with Merchant.all.total_revenue_by_date(params)
+    respond_with ({ "total_revenue" => Merchant.all.total_revenue_by_date(params[:date])})
   end
 
 end
