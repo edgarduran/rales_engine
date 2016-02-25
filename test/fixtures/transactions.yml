@@ -12,10 +12,10 @@ two:
 
 three:
   credit_card_number: 1234567890987654
-  result: fail
+  result: failed
   invoice_id: 3
 
 four:
   credit_card_number: 0987654321234567
-  result: fail
-  invoice_id:
+  result: failed
+  invoice_id: 

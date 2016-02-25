@@ -9,7 +9,7 @@ class Api::V1::Customers::TransactionsControllerTest < ActionController::TestCas
     assert_response :success
     assert_equal 2, transactions.count
     assert_equal "success", transactions.first['result']
-    assert_equal "fail", transactions.last['result']
+    assert_equal "failed", transactions.last['result']
   end
 
 end

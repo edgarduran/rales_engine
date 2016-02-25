@@ -24,7 +24,7 @@ class Api::V1::TransactionsFindControllerTest < ActionController::TestCase
     assert_equal "1234567890987654", transactions.first['credit_card_number']
     assert_equal "success", transactions.first['result']
     assert_equal "1234567890987654", transactions.last['credit_card_number']
-    assert_equal "fail", transactions.last['result']
+    assert_equal "failed", transactions.last['result']
   end
 
   test "#index by id" do
@@ -45,7 +45,7 @@ class Api::V1::TransactionsFindControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal "1234567890987654", transaction['credit_card_number']
-    assert_equal "fail", transaction['result']
+    assert_equal "failed", transaction['result']
   end
 
   test "#show by id" do
@@ -55,7 +55,7 @@ class Api::V1::TransactionsFindControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal "1234567890987654", transaction['credit_card_number']
-    assert_equal "fail", transaction['result']
+    assert_equal "failed", transaction['result']
   end
 
 end

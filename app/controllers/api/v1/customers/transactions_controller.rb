@@ -6,4 +6,6 @@ class Api::V1::Customers::TransactionsController < ApplicationController
     respond_with customer.transactions
   end
 
+
+
 end
