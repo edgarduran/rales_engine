@@ -8,6 +8,6 @@ class Api::V1::Items::InvoiceItemsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal 1, invoice_items.count
-    assert_equal 1, invoice_items.first['unit_price']
+    assert_equal "1.0", invoice_items.first['unit_price']
   end
 end

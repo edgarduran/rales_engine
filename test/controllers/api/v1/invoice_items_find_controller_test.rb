@@ -8,7 +8,7 @@ class Api::V1::InvoiceItemsFindControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal 3, invoice_items.first['quantity']
-    assert_equal 2, invoice_items.first['unit_price']
+    assert_equal "2.0", invoice_items.first['unit_price']
   end
 
   test "#show" do
@@ -18,7 +18,7 @@ class Api::V1::InvoiceItemsFindControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal 1, invoice_item['quantity']
-    assert_equal 1, invoice_item['unit_price']
+    assert_equal "1.0", invoice_item['unit_price']
   end
 
 end
