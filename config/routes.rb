@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
 
   namespace :api do
-  namespace :v1 do
-    namespace :items do
-      get 'merchant/show'
-      end
-    end
-  end
-
-  namespace :api do
     namespace :v1, defaults: {format: :json} do
       get '/customers/find_all',     to: 'customers_find#index'
       get '/customers/find',         to: 'customers_find#show'
