@@ -21,14 +21,20 @@ Rails.application.routes.draw do
       get '/merchants/find_all',     to: 'merchants_find#index'
       get '/merchants/find',         to: 'merchants_find#show'
       get '/merchants/random',       to: 'merchants_random#show'
+      get '/merchants/most_revenue', to: 'merchants_revenue#index'
+      get '/merchants/revenue',      to: 'merchants_revenue#show'
+      get '/merchants/most_items',   to: 'merchants_most_items#index'
 
       get '/transactions/find_all',  to: 'transactions_find#index'
       get '/transactions/find',      to: 'transactions_find#show'
       get '/transactions/random',    to: 'transactions_random#show'
 
       resources :merchants, only: [:index, :show], defaults: {format: :json} do
-        get '/items',    to: 'merchants/items#index'
-        get '/invoices', to: 'merchants/invoices#index'
+        get '/items',                           to: 'merchants/items#index'
+        get '/invoices',                        to: 'merchants/invoices#index'
+        get '/favorite_customer',               to: 'merchants/favorite_customer#show'
+        get '/revenue',                         to: 'merchants/revenue#show'
+        get '/customers_with_pending_invoices', to: 'merchants/customers_with_pending_invoices#index'
       end
 
       resources :invoices, only: [:index, :show], defaults: {format: :json} do
@@ -54,8 +60,9 @@ Rails.application.routes.draw do
       end
 
       resources :customers, only: [:index, :show], defaults: {format: :json} do
-        get '/invoices',     to: 'customers/invoices#index'
-        get '/transactions', to: 'customers/transactions#index'
+        get '/invoices',          to: 'customers/invoices#index'
+        get '/transactions',      to: 'customers/transactions#index'
+        get '/favorite_merchant', to: 'customers/favorite_merchant#show'
       end
     end
   end
