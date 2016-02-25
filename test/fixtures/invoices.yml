@@ -1,16 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 3
   status: Paid
-  merchant_id:
-  customer_id:
+  merchant_id: 2
+  customer_id: 3
 
 two:
+  id: 2
   status: Paid
-  merchant_id:
-  customer_id:
-    
+  merchant_id: 1
+  customer_id: 1
+
 three:
+  id: 1
   status: Pending
-  merchant_id:
-  customer_id:
+  merchant_id: 1
+  customer_id: 3
