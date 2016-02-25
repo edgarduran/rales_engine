@@ -18,6 +18,7 @@ gem 'pry'
 
 group :test do
   gem 'byebug'
+  gem 'simplecov'
 end
 
 group :development do
