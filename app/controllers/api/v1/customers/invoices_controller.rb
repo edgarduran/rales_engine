@@ -5,5 +5,6 @@ class Api::V1::Customers::InvoicesController < ApplicationController
     customer = Customer.find(params[:customer_id])
     respond_with customer.invoices
   end
-  
+
+
 end
